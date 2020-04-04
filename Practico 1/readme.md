@@ -1,4 +1,4 @@
-#PRACTICO 1
+# PRACTICO 1
 
 Crear una función adivinar que permita adivinar un número generado en forma aleatoria
 * El número debe estar entre 0 y 100
