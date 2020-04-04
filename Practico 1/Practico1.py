@@ -1,4 +1,4 @@
-#PRACTICO 1
+1#PRACTICO 1
 
 #Crear una función adivinar que permita adivinar un número generado en forma aleatoria
 # El número debe estar entre 0 y 100
@@ -11,33 +11,36 @@
 
 # Ejecutar el script desde la consola  python nombre_programa.py
 
-def aleatorio():
+def aleatorio(intentos):
     
     import random
     random = random.randint(0, 100)
     print(str(random))
     cont = 1
-    intentos =int(input('Ingrese cantidad de intentos\n'))
 
 
-    while True:
+    for i in range(1, intentos+1):
+
         numero_elegido=int( input("¿Cual cree que es el numero? Intento N° "+str(cont)+"\n"))
         
         
         if (cont == intentos):
-            print ("Se te acabaron los intentos, el numero era:"+random)
+            print ("Se te acabaron los intentos, el numero era:"+str(random))
             return 0
+            
         else:
-            cont=cont + 1
+            
             if (numero_elegido == random):
-                print("Adivino el numero\n")
+                print("Adivino el numero en el intento N°"+str(cont))
                 return 0
             elif (numero_elegido<random):
                 print("Más arriba")
             else:
                 print("Más abajo")
-        
+            
+            cont=cont + 1
 
 
+intentos =int(input('Ingrese cantidad de intentos\n'))
 
-aleatorio()
+aleatorio(intentos)
